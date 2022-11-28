@@ -54,3 +54,4 @@ const styleBigAvatar = {
     styleGrid,
   };
   
+  

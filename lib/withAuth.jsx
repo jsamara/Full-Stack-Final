@@ -43,6 +43,7 @@ export default function withAuth(
       }
     }
 
+  
     render() {
       const { user } = this.props;
 
