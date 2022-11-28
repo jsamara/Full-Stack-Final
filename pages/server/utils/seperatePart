@@ -1,0 +1,27 @@
+const _ = require('lodash');
+
+const seperatePart = text => _.kebabCase(text);
+
+async function createUniquePart(Model, part, count) {
+  const user = await Model.findOne({ part: `${part}-${count}` }, 'id');
+
+  if (!user) {
+    return `${part}-${count}`;
+  }
+
+  return createUniquePart(Model, part, count + 1);
+}
+
+async function generatePart(Model, name, filter = {}) {
+  const origPart = seperatePart(name);
+
+  const user = await Model.findOne(Object.assign({ part: origPart }, filter), 'id');
+
+  if (!user) {
+    return origPart;
+  }
+
+  return createUniquePart(Model, origPart, 1);
+}
+
+module.exports = generatePart;

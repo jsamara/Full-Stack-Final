@@ -9,14 +9,21 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@emotion/css": "^11.10.5",
+    "@emotion/react": "^11.10.5",
+    "@emotion/server": "^11.10.0",
+    "@emotion/styled": "^11.10.5",
+    "@mui/material": "^5.10.15",
     "@types/node": "18.11.9",
     "@types/react": "18.0.25",
     "@types/react-dom": "18.0.9",
     "eslint": "8.28.0",
     "eslint-config-next": "13.0.5",
-    "next": "13.0.5",
-    "react": "18.2.0",
-    "react-dom": "18.2.0",
+    "next": "12.0.5",
+    "react": "17.2.0",
+    "react-dom": "17.2.0",
+    "socket.io": "^4.5.4",
+    "socket.io-client": "^4.5.4",
     "typescript": "4.9.3"
   }
 }
