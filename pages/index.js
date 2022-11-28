@@ -2,8 +2,16 @@ import{useEffect, useState} from "react";
 import io from 'socket.io-client';
 import React from 'react';
 import Head from 'next/head';
+import PropTypes from 'prop-types';
 
 import withAuth from '../lib/withAuth';
+
+const propTypes = {
+  user: PropTypes.shape({
+    displayName: PropTypes.string,
+    email: PropTypes.string.isRequired,
+  }),
+};
 
 let socket;
 
@@ -74,3 +82,7 @@ export default function Home() {
     </main>
   )
 }
+
+Home.getInitialProps = async (ctx) => ({ user: ctx.query.user });
+
+Home.propTypes = propTypes;

@@ -22,7 +22,7 @@ const styleBigAvatar = {
     fontWeight: '400',
     letterSpacing: '0.01em',
     color: 'white',
-    backgroundColor: '#DF4930',
+    backgroundColor: '#00005C',
   };
   
   const styleTextField = {
