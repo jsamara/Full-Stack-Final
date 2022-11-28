@@ -78,3 +78,4 @@ class MenuWithAvatar extends React.Component {
 MenuWithAvatar.propTypes = propTypes;
 
 export default MenuWithAvatar;
+
